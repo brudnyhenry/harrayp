@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RESPONSE VERSION="L100">
+  <OBJECT basetype="volumes" name="volume" oid="1" format="rows">
+    <PROPERTY name="virtual-disk-name" type="string" size="21" draw="true" sort="string" display-name="Vdisk Name">big_slow</PROPERTY>
+    <PROPERTY name="volume-name" type="string" size="21" draw="true" sort="string" display-name="Name">test_volume_a</PROPERTY>
+    <PROPERTY name="size" units="GB" type="string" size="16" draw="true" sort="size" display-name="Size">2699.9GB</PROPERTY>
+    <PROPERTY name="size-numeric" units="blocks512" type="uint32" size="16" draw="true" sort="size" display-name="Size">5273437472</PROPERTY>
+    <PROPERTY name="preferred-owner" type="string" size="4" draw="true" sort="string" display-name="Preferred Owner">B</PROPERTY>
+    <PROPERTY name="preferred-owner-numeric" type="uint32" size="4" draw="true" sort="string" display-name="Preferred Owner">0</PROPERTY>
+    <PROPERTY name="owner" type="string" size="3" draw="true" sort="string" display-name="Current Owner">B</PROPERTY>
+    <PROPERTY name="owner-numeric" type="uint32" size="3" draw="true" sort="string" display-name="Current Owner">0</PROPERTY>
+    <PROPERTY name="serial-number" key="true" type="string" size="33" draw="true" sort="string" display-name="Serial Number">00c0ff11dbc2000082b7374e01000000</PROPERTY>
+    <PROPERTY name="write-policy" type="string" size="13" draw="true" sort="string" display-name="Cache Write Policy">write-back</PROPERTY>
+    <PROPERTY name="write-policy-numeric" type="uint32" size="13" draw="true" sort="string" display-name="Cache Write Policy">1</PROPERTY>
+    <PROPERTY name="cache-optimization" type="string" size="16" draw="true" sort="string" display-name="Cache Optimization">standard</PROPERTY>
+    <PROPERTY name="cache-optimization-numeric" type="uint32" size="16" draw="true" sort="string" display-name="Cache Optimization">0</PROPERTY>
+    <PROPERTY name="read-ahead-size" type="string" size="16" draw="true" sort="string" display-name="Read Ahead Size">Default</PROPERTY>
+    <PROPERTY name="read-ahead-size-numeric" type="uint32" size="16" draw="true" sort="string" display-name="Read Ahead Size">-1</PROPERTY>
+    <PROPERTY name="volume-type" type="string" size="12" draw="true" sort="string" display-name="Type">standard</PROPERTY>
+    <PROPERTY name="volume-type-numeric" type="uint32" size="12" draw="true" sort="string" display-name="Type">0</PROPERTY>
+    <PROPERTY name="volume-class" type="string" size="8" draw="false" sort="string" display-name="Class">standard</PROPERTY>
+    <PROPERTY name="volume-class-numeric" type="uint32" size="8" draw="false" sort="string" display-name="Class">0</PROPERTY>
+    <PROPERTY name="volume-qualifier" type="string" size="30" draw="false" sort="string" display-name="Qualifier">N/A</PROPERTY>
+    <PROPERTY name="volume-qualifier-numeric" type="uint32" size="30" draw="false" sort="string" display-name="Qualifier">0</PROPERTY>
+    <PROPERTY name="blocks" blocksize="512" type="uint64" size="32" draw="false" sort="integer" display-name="Blocks">5273437472</PROPERTY>
+    <PROPERTY name="capabilities" type="string" size="15" draw="false" sort="nosort" display-name="Volume Capabilities">dme</PROPERTY>
+    <PROPERTY name="volume-parent" type="string" size="32" draw="false" sort="string" display-name="Master Volume"></PROPERTY>
+    <PROPERTY name="snap-pool" type="string" size="32" draw="false" sort="string" display-name="Snap-pool"></PROPERTY>
+    <PROPERTY name="replication-set" type="string" size="32" draw="false" sort="string" display-name="Replication Set"></PROPERTY>
+    <PROPERTY name="attributes" type="string" size="15" draw="false" sort="string" display-name="Single Pathed"></PROPERTY>
+    <PROPERTY name="virtual-disk-serial" type="string" size="32" draw="false" sort="string" display-name="Vdisk Serial Number">00c0ff11dbc200007cdff04d00000000</PROPERTY>
+    <PROPERTY name="volume-description" type="string" size="130" draw="false" sort="string" display-name="Volume Description"></PROPERTY>
+    <PROPERTY name="wwn" type="string" size="48" draw="false" sort="string" display-name="WWN">600C0FF00011DBC282B7374E01000000</PROPERTY>
+    <PROPERTY name="progress" type="string" size="8" draw="false" sort="string" display-name="Progress">0%</PROPERTY>
+    <PROPERTY name="progress-numeric" type="uint32" size="8" draw="false" sort="string" display-name="Progress">0</PROPERTY>
+    <PROPERTY name="container-name" type="string" size="21" draw="false" sort="string" display-name="Container Name">big_slow</PROPERTY>
+    <PROPERTY name="container-serial" type="string" size="32" draw="false" sort="string" display-name="Container Serial Number">00c0ff11dbc200007cdff04d00000000</PROPERTY>
+    <PROPERTY name="health" type="string" size="10" draw="true" sort="string" display-name="Health">OK</PROPERTY>
+    <PROPERTY name="health-numeric" type="uint32" size="10" draw="true" sort="string" display-name="Health">0</PROPERTY>
+    <PROPERTY name="health-reason" type="string" size="80" draw="true" sort="string" display-name="Health Reason"></PROPERTY>
+    <PROPERTY name="health-recommendation" type="string" size="900" draw="true" sort="string" display-name="Health Recommendation"></PROPERTY>
+  </OBJECT>
+  <OBJECT basetype="volumes" name="volume" oid="2" format="rows">
+    <PROPERTY name="virtual-disk-name" type="string" size="21" draw="true" sort="string" display-name="Vdisk Name">fast</PROPERTY>
+    <PROPERTY name="volume-name" type="string" size="21" draw="true" sort="string" display-name="Name">test_volume_b</PROPERTY>
+    <PROPERTY name="size" units="GB" type="string" size="16" draw="true" sort="size" display-name="Size">1499.9GB</PROPERTY>
+    <PROPERTY name="size-numeric" units="blocks512" type="uint32" size="16" draw="true" sort="size" display-name="Size">2929687488</PROPERTY>
+    <PROPERTY name="preferred-owner" type="string" size="4" draw="true" sort="string" display-name="Preferred Owner">A</PROPERTY>
+    <PROPERTY name="preferred-owner-numeric" type="uint32" size="4" draw="true" sort="string" display-name="Preferred Owner">1</PROPERTY>
+    <PROPERTY name="owner" type="string" size="3" draw="true" sort="string" display-name="Current Owner">A</PROPERTY>
+    <PROPERTY name="owner-numeric" type="uint32" size="3" draw="true" sort="string" display-name="Current Owner">1</PROPERTY>
+    <PROPERTY name="serial-number" key="true" type="string" size="33" draw="true" sort="string" display-name="Serial Number">00c0ff11dbc200009ab5374e01000000</PROPERTY>
+    <PROPERTY name="write-policy" type="string" size="13" draw="true" sort="string" display-name="Cache Write Policy">write-back</PROPERTY>
+    <PROPERTY name="write-policy-numeric" type="uint32" size="13" draw="true" sort="string" display-name="Cache Write Policy">1</PROPERTY>
+    <PROPERTY name="cache-optimization" type="string" size="16" draw="true" sort="string" display-name="Cache Optimization">standard</PROPERTY>
+    <PROPERTY name="cache-optimization-numeric" type="uint32" size="16" draw="true" sort="string" display-name="Cache Optimization">0</PROPERTY>
+    <PROPERTY name="read-ahead-size" type="string" size="16" draw="true" sort="string" display-name="Read Ahead Size">Default</PROPERTY>
+    <PROPERTY name="read-ahead-size-numeric" type="uint32" size="16" draw="true" sort="string" display-name="Read Ahead Size">-1</PROPERTY>
+    <PROPERTY name="volume-type" type="string" size="12" draw="true" sort="string" display-name="Type">master volume</PROPERTY>
+    <PROPERTY name="volume-type-numeric" type="uint32" size="12" draw="true" sort="string" display-name="Type">2</PROPERTY>
+    <PROPERTY name="volume-class" type="string" size="8" draw="false" sort="string" display-name="Class">PTSNAP</PROPERTY>
+    <PROPERTY name="volume-class-numeric" type="uint32" size="8" draw="false" sort="string" display-name="Class">1</PROPERTY>
+    <PROPERTY name="volume-qualifier" type="string" size="30" draw="false" sort="string" display-name="Qualifier">N/A</PROPERTY>
+    <PROPERTY name="volume-qualifier-numeric" type="uint32" size="30" draw="false" sort="string" display-name="Qualifier">0</PROPERTY>
+    <PROPERTY name="blocks" blocksize="512" type="uint64" size="32" draw="false" sort="integer" display-name="Blocks">2929687488</PROPERTY>
+    <PROPERTY name="capabilities" type="string" size="15" draw="false" sort="nosort" display-name="Volume Capabilities">dmsc</PROPERTY>
+    <PROPERTY name="volume-parent" type="string" size="32" draw="false" sort="string" display-name="Master Volume"></PROPERTY>
+    <PROPERTY name="snap-pool" type="string" size="32" draw="false" sort="string" display-name="Snap-pool">00c0ff11dbc200004a8f384e01000000</PROPERTY>
+    <PROPERTY name="replication-set" type="string" size="32" draw="false" sort="string" display-name="Replication Set"></PROPERTY>
+    <PROPERTY name="attributes" type="string" size="15" draw="false" sort="string" display-name="Single Pathed"></PROPERTY>
+    <PROPERTY name="virtual-disk-serial" type="string" size="32" draw="false" sort="string" display-name="Vdisk Serial Number">00c0ff11dbc20000b512f24d00000000</PROPERTY>
+    <PROPERTY name="volume-description" type="string" size="130" draw="false" sort="string" display-name="Volume Description"></PROPERTY>
+    <PROPERTY name="wwn" type="string" size="48" draw="false" sort="string" display-name="WWN">600C0FF00011DBC29AB5374E01000000</PROPERTY>
+    <PROPERTY name="progress" type="string" size="8" draw="false" sort="string" display-name="Progress">0%</PROPERTY>
+    <PROPERTY name="progress-numeric" type="uint32" size="8" draw="false" sort="string" display-name="Progress">0</PROPERTY>
+    <PROPERTY name="container-name" type="string" size="21" draw="false" sort="string" display-name="Container Name">fast</PROPERTY>
+    <PROPERTY name="container-serial" type="string" size="32" draw="false" sort="string" display-name="Container Serial Number">00c0ff11dbc20000b512f24d00000000</PROPERTY>
+    <PROPERTY name="health" type="string" size="10" draw="true" sort="string" display-name="Health">OK</PROPERTY>
+    <PROPERTY name="health-numeric" type="uint32" size="10" draw="true" sort="string" display-name="Health">0</PROPERTY>
+    <PROPERTY name="health-reason" type="string" size="80" draw="true" sort="string" display-name="Health Reason"></PROPERTY>
+    <PROPERTY name="health-recommendation" type="string" size="900" draw="true" sort="string" display-name="Health Recommendation"></PROPERTY>
+  </OBJECT>
+  <OBJECT basetype="volumes" name="volume" oid="3" format="rows">
+    <PROPERTY name="virtual-disk-name" type="string" size="21" draw="true" sort="string" display-name="Vdisk Name">fast</PROPERTY>
+    <PROPERTY name="volume-name" type="string" size="21" draw="true" sort="string" display-name="Name">test_snapshot_volume_c</PROPERTY>
+    <PROPERTY name="size" units="GB" type="string" size="16" draw="true" sort="size" display-name="Size">1499.9GB</PROPERTY>
+    <PROPERTY name="size-numeric" units="blocks512" type="uint32" size="16" draw="true" sort="size" display-name="Size">2929687488</PROPERTY>
+    <PROPERTY name="preferred-owner" type="string" size="4" draw="true" sort="string" display-name="Preferred Owner">A</PROPERTY>
+    <PROPERTY name="preferred-owner-numeric" type="uint32" size="4" draw="true" sort="string" display-name="Preferred Owner">1</PROPERTY>
+    <PROPERTY name="owner" type="string" size="3" draw="true" sort="string" display-name="Current Owner">A</PROPERTY>
+    <PROPERTY name="owner-numeric" type="uint32" size="3" draw="true" sort="string" display-name="Current Owner">1</PROPERTY>
+    <PROPERTY name="serial-number" key="true" type="string" size="33" draw="true" sort="string" display-name="Serial Number">00c0ff11dbc200005617d25c01000000</PROPERTY>
+    <PROPERTY name="write-policy" type="string" size="13" draw="true" sort="string" display-name="Cache Write Policy">write-back</PROPERTY>
+    <PROPERTY name="write-policy-numeric" type="uint32" size="13" draw="true" sort="string" display-name="Cache Write Policy">1</PROPERTY>
+    <PROPERTY name="cache-optimization" type="string" size="16" draw="true" sort="string" display-name="Cache Optimization">standard</PROPERTY>
+    <PROPERTY name="cache-optimization-numeric" type="uint32" size="16" draw="true" sort="string" display-name="Cache Optimization">0</PROPERTY>
+    <PROPERTY name="read-ahead-size" type="string" size="16" draw="true" sort="string" display-name="Read Ahead Size">Default</PROPERTY>
+    <PROPERTY name="read-ahead-size-numeric" type="uint32" size="16" draw="true" sort="string" display-name="Read Ahead Size">-1</PROPERTY>
+    <PROPERTY name="volume-type" type="string" size="12" draw="true" sort="string" display-name="Type">snapshot</PROPERTY>
+    <PROPERTY name="volume-type-numeric" type="uint32" size="12" draw="true" sort="string" display-name="Type">3</PROPERTY>
+    <PROPERTY name="volume-class" type="string" size="8" draw="false" sort="string" display-name="Class">PTSNAP</PROPERTY>
+    <PROPERTY name="volume-class-numeric" type="uint32" size="8" draw="false" sort="string" display-name="Class">1</PROPERTY>
+    <PROPERTY name="volume-qualifier" type="string" size="30" draw="false" sort="string" display-name="Qualifier">N/A</PROPERTY>
+    <PROPERTY name="volume-qualifier-numeric" type="uint32" size="30" draw="false" sort="string" display-name="Qualifier">0</PROPERTY>
+    <PROPERTY name="blocks" blocksize="512" type="uint64" size="32" draw="false" sort="integer" display-name="Blocks">2929687488</PROPERTY>
+    <PROPERTY name="capabilities" type="string" size="15" draw="false" sort="nosort" display-name="Volume Capabilities">mlr</PROPERTY>
+    <PROPERTY name="volume-parent" type="string" size="32" draw="false" sort="string" display-name="Master Volume">00c0ff11dbc200009ab5374e01000000</PROPERTY>
+    <PROPERTY name="snap-pool" type="string" size="32" draw="false" sort="string" display-name="Snap-pool"></PROPERTY>
+    <PROPERTY name="replication-set" type="string" size="32" draw="false" sort="string" display-name="Replication Set"></PROPERTY>
+    <PROPERTY name="attributes" type="string" size="15" draw="false" sort="string" display-name="Single Pathed"></PROPERTY>
+    <PROPERTY name="virtual-disk-serial" type="string" size="32" draw="false" sort="string" display-name="Vdisk Serial Number">00c0ff11dbc20000b512f24d00000000</PROPERTY>
+    <PROPERTY name="volume-description" type="string" size="130" draw="false" sort="string" display-name="Volume Description"></PROPERTY>
+    <PROPERTY name="wwn" type="string" size="48" draw="false" sort="string" display-name="WWN">600C0FF00011DBC25617D25C01000000</PROPERTY>
+    <PROPERTY name="progress" type="string" size="8" draw="false" sort="string" display-name="Progress">0%</PROPERTY>
+    <PROPERTY name="progress-numeric" type="uint32" size="8" draw="false" sort="string" display-name="Progress">0</PROPERTY>
+    <PROPERTY name="container-name" type="string" size="21" draw="false" sort="string" display-name="Container Name">fast</PROPERTY>
+    <PROPERTY name="container-serial" type="string" size="32" draw="false" sort="string" display-name="Container Serial Number">00c0ff11dbc20000b512f24d00000000</PROPERTY>
+    <PROPERTY name="health" type="string" size="10" draw="true" sort="string" display-name="Health">OK</PROPERTY>
+    <PROPERTY name="health-numeric" type="uint32" size="10" draw="true" sort="string" display-name="Health">0</PROPERTY>
+    <PROPERTY name="health-reason" type="string" size="80" draw="true" sort="string" display-name="Health Reason"></PROPERTY>
+    <PROPERTY name="health-recommendation" type="string" size="900" draw="true" sort="string" display-name="Health Recommendation"></PROPERTY>
+  </OBJECT>
+  <OBJECT basetype="status" name="status" oid="33">
+    <PROPERTY name="response-type" type="string" size="12" draw="false" sort="nosort" display-name="Response Type">Success</PROPERTY>
+    <PROPERTY name="response-type-numeric" type="uint32" size="12" draw="false" sort="nosort" display-name="Response Type">0</PROPERTY>
+    <PROPERTY name="response" type="string" size="180" draw="true" sort="nosort" display-name="Response">Command completed successfully. (2019-05-12 18:24:13)</PROPERTY>
+    <PROPERTY name="return-code" type="sint32" size="15" draw="false" sort="nosort" display-name="Return Code">0</PROPERTY>
+    <PROPERTY name="component-id" type="string" size="80" draw="false" sort="nosort" display-name="Component ID"></PROPERTY>
+    <PROPERTY name="time-stamp" type="string" size="25" draw="false" sort="datetime" display-name="Time">2019-05-12 18:24:13</PROPERTY>
+    <PROPERTY name="time-stamp-numeric" type="uint32" size="25" draw="false" sort="datetime" display-name="Time">1557685453</PROPERTY>
+  </OBJECT>
+</RESPONSE>

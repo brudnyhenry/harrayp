@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RESPONSE VERSION="L100">
+    <OBJECT basetype="hosts" name="hosts" oid="1" format="rows">
+        <PROPERTY name="host-id" key="true" type="string" size="224" draw="true" sort="string" display-name="Host ID">21fd0005336c8a73</PROPERTY>
+        <PROPERTY name="host-name" type="string" size="32" draw="true" sort="string" display-name="Name">TestHost1</PROPERTY>
+        <PROPERTY name="host-discovered" type="string" size="10" draw="true" sort="string" display-name="Discovered">No</PROPERTY>
+        <PROPERTY name="host-mapped" type="string" size="6" draw="true" sort="string" display-name="Mapped">No</PROPERTY>
+        <PROPERTY name="host-profile" type="string" size="10" draw="true" sort="string" display-name="Profile">Standard</PROPERTY>
+        <PROPERTY name="host-bus-type" type="string" size="10" draw="true" sort="string" display-name="Host Type">Undefined</PROPERTY>
+        <PROPERTY name="host-port-bits-a" type="uint32" size="8" draw="false" sort="string" display-name="Host Port Bits Ctlr A">0</PROPERTY>
+        <PROPERTY name="host-port-bits-b" type="uint32" size="8" draw="false" sort="string" display-name="Host Port Bits Ctlr B">0</PROPERTY>
+    </OBJECT>
+    <OBJECT basetype="hosts" name="hosts" oid="2" format="rows">
+        <PROPERTY name="host-id" key="true" type="string" size="224" draw="true" sort="string" display-name="Host ID">5001438009acd442</PROPERTY>
+        <PROPERTY name="host-name" type="string" size="32" draw="true" sort="string" display-name="Name">TestHost2</PROPERTY>
+        <PROPERTY name="host-discovered" type="string" size="10" draw="true" sort="string" display-name="Discovered">No</PROPERTY>
+        <PROPERTY name="host-mapped" type="string" size="6" draw="true" sort="string" display-name="Mapped">No</PROPERTY>
+        <PROPERTY name="host-profile" type="string" size="10" draw="true" sort="string" display-name="Profile">Standard</PROPERTY>
+        <PROPERTY name="host-bus-type" type="string" size="10" draw="true" sort="string" display-name="Host Type">Undefined</PROPERTY>
+        <PROPERTY name="host-port-bits-a" type="uint32" size="8" draw="false" sort="string" display-name="Host Port Bits Ctlr A">0</PROPERTY>
+        <PROPERTY name="host-port-bits-b" type="uint32" size="8" draw="false" sort="string" display-name="Host Port Bits Ctlr B">0</PROPERTY>
+    </OBJECT>
+    <OBJECT basetype="status" name="status" oid="3">
+        <PROPERTY name="response-type" type="string" size="12" draw="false" sort="nosort" display-name="Response Type">Success</PROPERTY>
+        <PROPERTY name="response-type-numeric" type="uint32" size="12" draw="false" sort="nosort" display-name="Response Type">0</PROPERTY>
+        <PROPERTY name="response" type="string" size="180" draw="true" sort="nosort" display-name="Response">Command completed successfully. (2019-05-12 07:17:46)</PROPERTY>
+        <PROPERTY name="return-code" type="sint32" size="15" draw="false" sort="nosort" display-name="Return Code">0</PROPERTY>
+        <PROPERTY name="component-id" type="string" size="80" draw="false" sort="nosort" display-name="Component ID"></PROPERTY>
+        <PROPERTY name="time-stamp" type="string" size="25" draw="false" sort="datetime" display-name="Time">2019-05-12 07:17:46</PROPERTY>
+        <PROPERTY name="time-stamp-numeric" type="uint32" size="25" draw="false" sort="datetime" display-name="Time">1557645466</PROPERTY>
+    </OBJECT>
+</RESPONSE>
