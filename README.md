@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/brudnyhenry/harrayp.svg?branch=master)](https://travis-ci.org/brudnyhenry/harrayp)
+
 <img src="./img/logo.png" width="200"/>
 
 # HarrayP
@@ -25,6 +27,12 @@ Use "harrayp [command] --help" for more information about a command.
 ```
 
 ## Configuration
+Example config file with array login details:
+```yaml
+url: "http://XXX"
+login: "user"
+password: "password"
+```
 
 Configuration file default location is $HOME/.harrayp.yaml
 
