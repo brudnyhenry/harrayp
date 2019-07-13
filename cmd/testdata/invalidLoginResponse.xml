@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RESPONSE>
+    <OBJECT basetype="status" name="status" oid="1">
+        <PROPERTY name="response-type">error</PROPERTY>
+        <PROPERTY name="response-type-numeric">0</PROPERTY>
+        <PROPERTY name="response">CSESS00058bda42f1cc29</PROPERTY>
+        <PROPERTY name="return-code">1</PROPERTY>
+    </OBJECT>
+</RESPONSE>

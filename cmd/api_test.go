@@ -1,9 +1,11 @@
 package cmd
 
 import (
+	"fmt"
 	"io/ioutil"
 	"net/http"
 	"net/http/httptest"
+	"os"
 	"reflect"
 	"testing"
 )
@@ -75,8 +77,17 @@ func TestShowHosts(t *testing.T) {
 		t.Errorf("Host list incorrectly parsed")
 	}
 }
-func TestShowAllVolumes(t *testing.T) {
-	expected := []string{"test_volume_a", "test_volume_b", "test_snapshot_volume_c"}
+
+func TestShowVolumes(t *testing.T) {
+	parameters := []struct {
+		input    string
+		expected []string
+	}{
+		{"all", []string{"test_volume_a", "test_volume_b", "test_snapshot_volume_c"}},
+		{"snapshot", []string{"test_snapshot_volume_c"}},
+		{"volume", []string{"test_volume_a", "test_volume_b"}},
+	}
+
 	f, err := ioutil.ReadFile("testdata/volumesResponse.xml")
 	if err != nil {
 		t.Log("No volumes response testdata file")
@@ -88,7 +99,6 @@ func TestShowAllVolumes(t *testing.T) {
 			}),
 		)
 	defer testServer.Close()
-
 	a := HpArray{
 		URL:      testServer.URL,
 		user:     "user",
@@ -96,61 +106,36 @@ func TestShowAllVolumes(t *testing.T) {
 		Client:   testServer.Client(),
 	}
 
-	result, _ := a.ShowVolumes("all")
-	if !reflect.DeepEqual(result, expected) {
-		t.Errorf("Volumes list incorrectly parsed, got %v expected %v", result, expected)
+	for _, i := range parameters {
+
+		result, _ := a.ShowVolumes(i.input)
+		if !reflect.DeepEqual(result, i.expected) {
+			t.Errorf("Volumes list incorrectly parsed, got %v expected %v", result, i.expected)
+		}
 	}
 }
 
-func TestShowAllVolumesSnapshots(t *testing.T) {
-	expected := []string{"test_snapshot_volume_c"}
-	f, err := ioutil.ReadFile("testdata/volumesResponse.xml")
+func TestHpArray_validateProperResponse(t *testing.T) {
+	xmlFile, err := os.Open("testdata/properLoginResponse.xml")
 	if err != nil {
-		t.Log("No volumes response testdata file")
+		fmt.Println("No login response testdata file")
 	}
-	testServer :=
-		httptest.NewServer(
-			http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-				w.Write(f)
-			}),
-		)
-	defer testServer.Close()
+	defer xmlFile.Close()
 
-	a := HpArray{
-		URL:      testServer.URL,
-		user:     "user",
-		password: "password",
-		Client:   testServer.Client(),
-	}
-
-	result, _ := a.ShowVolumes("snapshot")
-	if !reflect.DeepEqual(result, expected) {
-		t.Errorf("Spanshot list invalid, got %v expected %v", result, expected)
+	if ValidateResponseStatus(xmlFile) != nil {
+		t.Errorf("Response validation test failed")
 	}
 }
-func TestShowAllVolumesVolumes(t *testing.T) {
-	expected := []string{"test_volume_a", "test_volume_b"}
-	f, err := ioutil.ReadFile("testdata/volumesResponse.xml")
+
+func TestHpArray_validateInvalidResponse(t *testing.T) {
+	xmlFile, err := os.Open("testdata/invalidLoginResponse.xml")
 	if err != nil {
-		t.Log("No volumes response testdata file")
+		fmt.Println("No login response testdata file")
 	}
-	testServer :=
-		httptest.NewServer(
-			http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-				w.Write(f)
-			}),
-		)
-	defer testServer.Close()
+	defer xmlFile.Close()
 
-	a := HpArray{
-		URL:      testServer.URL,
-		user:     "user",
-		password: "password",
-		Client:   testServer.Client(),
+	if ValidateResponseStatus(xmlFile) == nil {
+		t.Errorf("Response validation test failed")
 	}
 
-	result, _ := a.ShowVolumes("volume")
-	if !reflect.DeepEqual(result, expected) {
-		t.Errorf("Volume list invalid, got %v expected %v", result, expected)
-	}
 }

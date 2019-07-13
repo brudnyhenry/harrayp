@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 
+	"github.com/brudnyhenry/harrayp/config"
 	"github.com/spf13/cobra"
 )
 
@@ -17,9 +18,9 @@ var volumesCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 
 		a := HpArray{
-			URL:      "http://10.1.1.201",
-			user:     "manage",
-			password: "mAnagier47",
+			URL:      config.URL,
+			user:     config.Login,
+			password: config.Password,
 			Client:   netClient,
 		}
 

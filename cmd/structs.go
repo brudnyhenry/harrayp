@@ -2,8 +2,8 @@ package cmd
 
 import "encoding/xml"
 
-// LoginResponse type returned by the array after sending login hash
-type LoginResponse struct {
+// Response is returned by the array after every request.
+type Response struct {
 	XMLName xml.Name `xml:"RESPONSE"`
 	Text    string   `xml:",chardata"`
 	Link    struct {
@@ -18,60 +18,30 @@ type LoginResponse struct {
 		Type string `xml:"type,attr"`
 		ID   string `xml:"id,attr"`
 	} `xml:"style"`
-	OBJECT struct {
-		Text     string `xml:",chardata"`
-		Basetype string `xml:"basetype,attr"`
-		Name     string `xml:"name,attr"`
-		Oid      string `xml:"oid,attr"`
-		PROPERTY []struct {
-			Text string `xml:",chardata"`
-			Name string `xml:"name,attr"`
-		} `xml:"PROPERTY"`
-	} `xml:"OBJECT"`
+	OBJECT []OBJECT `xml:"OBJECT"`
 }
 
-type HostsResponse struct {
-	XMLName xml.Name `xml:"RESPONSE"`
-	Text    string   `xml:",chardata"`
-	VERSION string   `xml:"VERSION,attr"`
-	OBJECT  []struct {
-		Basetype string `xml:"basetype,attr"`
-		Name     string `xml:"name,attr"`
-		Oid      string `xml:"oid,attr"`
-		Format   string `xml:"format,attr"`
-		PROPERTY []struct {
-			Text        string `xml:",chardata"`
-			Name        string `xml:"name,attr"`
-			Key         string `xml:"key,attr"`
-			Type        string `xml:"type,attr"`
-			Size        string `xml:"size,attr"`
-			Draw        string `xml:"draw,attr"`
-			Sort        string `xml:"sort,attr"`
-			DisplayName string `xml:"display-name,attr"`
-		} `xml:"PROPERTY"`
-	} `xml:"OBJECT"`
+// OBJECT struct holds all returned objects (hosts/volumes etc.)
+type OBJECT struct {
+	XMLName  xml.Name   `xml:"OBJECT"`
+	Basetype string     `xml:"basetype,attr"`
+	Name     string     `xml:"name,attr"`
+	Oid      string     `xml:"oid,attr"`
+	Format   string     `xml:"format,attr"`
+	PROPERTY []PROPERTY `xml:"PROPERTY"`
 }
 
-type VolumesResponse struct {
-	XMLName xml.Name `xml:"RESPONSE"`
-	Text    string   `xml:",chardata"`
-	VERSION string   `xml:"VERSION,attr"`
-	OBJECT  []struct {
-		Basetype string `xml:"basetype,attr"`
-		Name     string `xml:"name,attr"`
-		Oid      string `xml:"oid,attr"`
-		Format   string `xml:"format,attr"`
-		PROPERTY []struct {
-			Text        string `xml:",chardata"`
-			Name        string `xml:"name,attr"`
-			Type        string `xml:"type,attr"`
-			Size        string `xml:"size,attr"`
-			Draw        string `xml:"draw,attr"`
-			Sort        string `xml:"sort,attr"`
-			DisplayName string `xml:"display-name,attr"`
-			Units       string `xml:"units,attr"`
-			Key         string `xml:"key,attr"`
-			Blocksize   string `xml:"blocksize,attr"`
-		} `xml:"PROPERTY"`
-	} `xml:"OBJECT"`
+// PROPERTY holds attributes for a given object (volume size/ host name etc.)
+type PROPERTY struct {
+	XMLName     xml.Name `xml:"PROPERTY"`
+	Text        string   `xml:",chardata"`
+	Name        string   `xml:"name,attr"`
+	Type        string   `xml:"type,attr"`
+	Size        string   `xml:"size,attr"`
+	Draw        string   `xml:"draw,attr"`
+	Sort        string   `xml:"sort,attr"`
+	DisplayName string   `xml:"display-name,attr"`
+	Units       string   `xml:"units,attr"`
+	Key         string   `xml:"key,attr"`
+	Blocksize   string   `xml:"blocksize,attr"`
 }
